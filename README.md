@@ -137,6 +137,23 @@ servers in an upstream group without reloading the configuration. You can
 also use the NGINX plus API and key-value store to dynamically control
 access, for ex, base on client IP address.
 
+## Web server
+At a high level, configuring NGINX as a web server is a matter of defining
+which urls it handles and how it processes http requests for resources at
+those URIs. At a lower level, the config defines a set of *virtual servers*
+that control the processing of requests for particular domains or IP addresses.
+
+Each virtual server for HTTP traffic defines special config instances called
+*locations* that control processing of specific sets of URIs. Each location
+defines its own scenario of what happens to requests that are mapped to this
+location. NGINX plus provides full control of these processes. Each location
+can proxy the request or return a file. In addition, a URI can be modified,
+so that the request is redirected to another location or virtual server. Also,
+a specific error code can be returned and you can configure a specific page
+to correspond to each error code.
+
+
+
 
 
 
